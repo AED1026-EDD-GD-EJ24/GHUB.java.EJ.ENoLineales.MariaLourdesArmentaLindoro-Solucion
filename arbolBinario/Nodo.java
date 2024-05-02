@@ -1,7 +1,7 @@
 package arbolBinario;
 public class Nodo {
     public Object valor;
-    public Nodo izquiero;
+    public Nodo izquierdo;
     public Nodo derecho;
 
     public Nodo(){
