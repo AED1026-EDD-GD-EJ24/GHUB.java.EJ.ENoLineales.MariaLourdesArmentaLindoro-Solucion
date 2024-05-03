@@ -54,21 +54,19 @@ public class AppArbol{
 
                     break;
             }
-        }while (opc != 0);
-        
-
-        
+        }while (opc != 0);    
 
     }
     public static ArbolBinario insertarNodo(){ 
-        ArbolBinario ab =new ArbolBinario();
-        Nodo nodoA= new Nodo("A");
-        Nodo nodoB= new Nodo("B");
-        Nodo nodoC= new Nodo("C");
-        Nodo nodoD= new Nodo("D");
-        Nodo nodoE= new Nodo("E");
-        Nodo nodoF= new Nodo("F");
-        Nodo nodoG= new Nodo("G");
+        //crea un arbol binario y le inserta nodos
+        ArbolBinario ab = new ArbolBinario();
+        Nodo nodoA = new Nodo("A");
+        Nodo nodoB = new Nodo("B");
+        Nodo nodoC = new Nodo("C");
+        Nodo nodoD = new Nodo("D");
+        Nodo nodoE = new Nodo("E");
+        Nodo nodoF = new Nodo("F");
+        Nodo nodoG = new Nodo("G");
         ab.setRaiz(nodoA);
         ab.getRaiz().setIzquierdo(nodoB);
         ab.getRaiz().setDerecho(nodoC);
@@ -78,29 +76,32 @@ public class AppArbol{
         nodoC.setDerecho(nodoG);
         return ab;
 
-
     }
     public static void recorridoInOrden(){
         //crea un arbol binario y lo recorre inorden
         ArbolBinario ab = insertarNodo();
-        System.out.println("Recorrido InOrden Recursivo");
+        System.out.println("\n Recorrido inOrden Recursivo");
         ab.inorden();
-        System.out.println("\n Recorrido InOrden Iterativo");
+
+       
 
     }
     public static void recorridoPreOrden(){
         //crea un árbol y lo recorre en preorden
-        ArbolBinario ab =insertarNodo();
-        System.out.println("Recorrido PreOrden Recursivo");
+        ArbolBinario ab = insertarNodo();
+        System.out.println("\n Recorrido preOrden Recursivo");
         ab.preorden();
+
         
-        System.out.println("\n Recorrido PreOrden Iterativo");
-        ab.preordenIterativo();
           
 
     }
     public static void recorridoPostOrden(){
         //crea un árbol y lo recorre en postorden
+        ArbolBinario ab = insertarNodo();
+        System.out.println("\n Recorrido postOrden Recursivo");
+        ab.postorden();
+
 
     }
 }
