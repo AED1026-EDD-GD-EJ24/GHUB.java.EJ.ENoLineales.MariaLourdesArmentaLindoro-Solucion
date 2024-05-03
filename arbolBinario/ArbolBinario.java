@@ -1,5 +1,5 @@
 package arbolBinario;
-
+import pilas.Pila;
 
 public class ArbolBinario{
     private Nodo raiz;
@@ -58,6 +58,11 @@ public class ArbolBinario{
     }
     public void postorden(){
         postorden(raiz);
+    }
+
+    //Recorrido Iterativo en Preorden, utilizando una pila
+    public void preordenIterativo(){
+        Pila<Nodo> pila = new Pila<Nodo>();
     }
 
     
