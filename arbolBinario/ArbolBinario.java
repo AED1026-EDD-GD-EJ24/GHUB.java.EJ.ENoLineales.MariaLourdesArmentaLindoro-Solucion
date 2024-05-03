@@ -31,6 +31,17 @@ public class ArbolBinario{
     public void preorden(){
         preorden(this.raiz);
     }
+    public void inorden(){
+        inorden(raiz);
+    }
+    private void inorden(Nodo aux){
+        if (aux != null){
+            inorden(aux.getIzquierdo());
+            visitar(aux);
+            inorden(aux.getDerecho());
+        }
+    }
+    
     //implementacion de los recorridos iterativos
     public void preordenIterativo(){
         Pila<Nodo> pila = new Pila<Nodo>();
@@ -48,6 +59,10 @@ public class ArbolBinario{
             
         }
        
+    }
+
+    public void inordenIterativo(){
+
     }
 
     

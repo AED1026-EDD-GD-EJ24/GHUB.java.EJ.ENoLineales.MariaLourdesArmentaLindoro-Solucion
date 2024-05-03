@@ -33,7 +33,7 @@ public class AppArbol{
             opc=consola.nextInt();
             switch (opc) {
                 case 1:
-                    
+                    insertarNodo();
                     break;
                 case 2:
                     recorridoInOrden();
@@ -82,6 +82,10 @@ public class AppArbol{
     }
     public static void recorridoInOrden(){
         //crea un arbol binario y lo recorre inorden
+        ArbolBinario ab = insertarNodo();
+        System.out.println("Recorrido InOrden Recursivo");
+        ab.inorden();
+        System.out.println("\n Recorrido InOrden Iterativo");
 
     }
     public static void recorridoPreOrden(){
@@ -92,10 +96,7 @@ public class AppArbol{
         
         System.out.println("\n Recorrido PreOrden Iterativo");
         ab.preordenIterativo();
-       
-        
-
-        
+          
 
     }
     public static void recorridoPostOrden(){
