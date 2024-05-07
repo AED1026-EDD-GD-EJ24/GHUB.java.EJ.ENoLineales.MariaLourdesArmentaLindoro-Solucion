@@ -3,6 +3,12 @@
 ./miTest/AppTest.java
 ./colas/Nodo.java
 ./colas/Cola.java
+./arbolBinarioOrdenado/Nodo.java
+./arbolBinarioOrdenado/Persona.java
+./arbolBinarioOrdenado/Entero.java
+./arbolBinarioOrdenado/Estudiante.java
+./arbolBinarioOrdenado/Comparable.java
+./arbolBinarioOrdenado/ArbolBinario.java
 ./arbolBinario/Nodo.java
 ./arbolBinario/ArbolBinario.java
 ./miPrincipal/AppArbolBinarioBusqueda.java
