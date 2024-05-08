@@ -4,6 +4,7 @@
 ./colas/Nodo.java
 ./colas/Cola.java
 ./arbolBinarioOrdenado/Nodo.java
+./arbolBinarioOrdenado/DemoComparable.java
 ./arbolBinarioOrdenado/Persona.java
 ./arbolBinarioOrdenado/Entero.java
 ./arbolBinarioOrdenado/Estudiante.java

@@ -1,6 +1,6 @@
-package arbolBinarioOrdenado;
+package interfase;
 
-public class Persona implements Comparable {
+public class Persona implements Comparable<Persona> {
     private int id;
     private String nombre;
     public Persona(int id, String nombre) {
@@ -27,6 +27,18 @@ public class Persona implements Comparable {
         return "Persona [id=" + id + ", nombre=" + nombre + "]";
     }
     @Override
+    public int compareTo(Persona o) {
+        if (this.nombre.compareTo(o.getNombre())<0){
+            return -1;
+        }else if(this.nombre.compareTo(o.getNombre())>0)
+           return 1;
+        else{
+        return 0;
+        }
+    }
+    
+    /* 
+    @Override
     public boolean esIgual(Object q) {
         Persona obj = (Persona)q;
         //return (this.id == obj.getId());
@@ -44,6 +56,7 @@ public class Persona implements Comparable {
         //return(this.id<obj.getId());
         return (this.nombre.compareTo(obj.getNombre()) < 0);
     }
+    */
     
     
     
