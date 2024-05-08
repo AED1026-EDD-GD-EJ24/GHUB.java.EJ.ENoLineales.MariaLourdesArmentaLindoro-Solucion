@@ -13,7 +13,9 @@
 ./interfase/Criterio.java
 ./interfase/DemoComparable.java
 ./interfase/CriterioPersonaNombre.java
+./interfase/TestOrdenar.java
 ./interfase/Persona.java
+./interfase/Util.java
 ./interfase/CriterioPersonaId.java
 ./arbolBinario/Nodo.java
 ./arbolBinario/ArbolBinario.java
