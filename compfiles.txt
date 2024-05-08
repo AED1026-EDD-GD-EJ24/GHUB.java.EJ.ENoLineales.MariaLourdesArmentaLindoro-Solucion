@@ -9,6 +9,7 @@
 ./arbolBinarioOrdenado/Entero.java
 ./arbolBinarioOrdenado/Estudiante.java
 ./arbolBinarioOrdenado/Comparable.java
+./arbolBinarioOrdenado/BTreePrinter.java
 ./arbolBinarioOrdenado/ArbolBinario.java
 ./interfase/Criterio.java
 ./interfase/DemoComparable.java
