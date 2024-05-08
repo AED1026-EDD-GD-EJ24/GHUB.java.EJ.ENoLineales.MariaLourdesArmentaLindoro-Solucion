@@ -10,6 +10,10 @@
 ./arbolBinarioOrdenado/Estudiante.java
 ./arbolBinarioOrdenado/Comparable.java
 ./arbolBinarioOrdenado/ArbolBinario.java
+./interfase/Criterio.java
+./interfase/CriterioPersonaNombre.java
+./interfase/Persona.java
+./interfase/CriterioPersonaId.java
 ./arbolBinario/Nodo.java
 ./arbolBinario/ArbolBinario.java
 ./miPrincipal/AppArbolBinarioBusqueda.java

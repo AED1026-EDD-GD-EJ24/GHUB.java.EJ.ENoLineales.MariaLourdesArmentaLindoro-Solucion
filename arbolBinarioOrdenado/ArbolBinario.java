@@ -136,8 +136,68 @@ public class ArbolBinario{
 
     }
 
-    private void insertar(Object valor) throws Exception{
+    //Insercion de nodo, version iterativa
 
+    private void insertar(Object valor) throws Exception{
+        Comparable dato = (Comparable)valor;
+        Nodo nuevo = new Nodo();
+        nuevo.setValor(dato);
+
+        if(raiz == null)
+           raiz = nuevo;
+        else{
+            //anterior hace una referencia al padre de aux
+            Nodo anterior = null;
+
+            // aux es un auxiliar que va recorriendo los nodos, desde la raiz
+            Nodo aux = raiz;
+            while(aux !=null){
+                anterior = aux;
+                if(dato.esMenor(aux.getValor()))
+                   aux = aux.getIzquierdo();
+                if(dato.esMayor(aux.getValor()))
+                  aux = aux.getDerecho();
+                else 
+                   throw new Exception("Dato Duplicado");
+                    
+                
+            }
+            if(dato.esMenor(anterior.getValor()))
+               anterior.setIzquierdo(nuevo);
+            else
+               anterior.setDerecho(nuevo);
+
+        }
+
+    }
+
+    //Version recursiva de insertar
+    public void insertar2(Object valor) throws Exception{
+        Comparable dato = (Comparable)valor;
+        raiz = insertarRec(raiz, dato);
+    }
+
+    private Nodo insertarRec(Nodo raizSub, Comparable dato) throws Exception{
+        if(raizSub == null)
+           //caso base, termina la recursividad
+           raizSub = new Nodo(dato);
+        else{
+            if (dato.esMenor(raizSub.getValor())){
+                Nodo iz = insertarRec(raizSub.getIzquierdo(), dato);
+                raizSub.setIzquierdo(iz);
+
+            }else{
+                if(dato.esMayor(raizSub.getValor())){
+                    Nodo dr = insertarRec(raizSub.getDerecho(),dato);
+                    raizSub.setDerecho(dr);
+                }
+                else{
+                     
+                   throw new Exception("Nodo duplicado");
+                }
+            }
+        }
+        return raizSub;
     }
 
     
