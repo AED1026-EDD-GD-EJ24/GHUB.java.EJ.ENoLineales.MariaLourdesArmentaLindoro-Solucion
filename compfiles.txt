@@ -11,6 +11,7 @@
 ./arbolBinarioOrdenado/Comparable.java
 ./arbolBinarioOrdenado/ArbolBinario.java
 ./interfase/Criterio.java
+./interfase/DemoComparable.java
 ./interfase/CriterioPersonaNombre.java
 ./interfase/Persona.java
 ./interfase/CriterioPersonaId.java
