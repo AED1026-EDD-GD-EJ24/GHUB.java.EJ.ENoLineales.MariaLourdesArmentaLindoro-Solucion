@@ -4,19 +4,8 @@ import colas.Cola;
 
 public class ArbolBinario{
     private Nodo raiz;
-    public ArbolBinario(){
-        this.raiz = null;
-    }
-    public ArbolBinario(Nodo raiz){
-        this.raiz = raiz;
     
-    }
-    public Nodo getRaiz(){
-        return this.raiz;
-    }
-    public void setRaiz(Nodo raiz){
-        this.raiz = raiz;
-    }
+    
     
     private void visitar(Nodo aux){
         System.out.print(aux.getValor()+" ");
@@ -143,24 +132,32 @@ public class ArbolBinario{
         Nodo nuevo = new Nodo();
         nuevo.setValor(dato);
 
-        if(raiz == null)
+        if(raiz == null){
            raiz = nuevo;
+           System.out.println("izquierdo "+raiz.getIzquierdo());
+           System.out.println("derecho "+raiz.getDerecho());
+        }
+
         else{
             //anterior hace una referencia al padre de aux
             Nodo anterior = null;
 
             // aux es un auxiliar que va recorriendo los nodos, desde la raiz
             Nodo aux = raiz;
+            System.out.println("aqui empieza la raiz"+aux.getValor());
+            System.out.println("izquierda "+aux.getIzquierdo());
+            System.out.println("derecha"+aux.getDerecho());
+            
             while(aux !=null){
                 anterior = aux;
                 if(dato.esMenor(aux.getValor()))
-                   aux = aux.getIzquierdo();
-                if(dato.esMayor(aux.getValor()))
-                  aux = aux.getDerecho();
+                      aux = aux.getIzquierdo(); 
+                  
+                else if(dato.esMayor(aux.getValor()))
+                    aux = aux.getDerecho();
                 else 
                    throw new Exception("Dato Duplicado");
                     
-                
             }
             if(dato.esMenor(anterior.getValor()))
                anterior.setIzquierdo(nuevo);
@@ -199,6 +196,21 @@ public class ArbolBinario{
         }
         return raizSub;
     }
+    public Nodo getRaiz() {
+        return raiz;
+    }
+    public void setRaiz(Nodo raiz) {
+        this.raiz = raiz;
+    }
+    public ArbolBinario(Nodo raiz) {
+        this.raiz = raiz;
+    }
+    public ArbolBinario() {
+        raiz =null;
+    }
+    
+    
+    
 
     
 

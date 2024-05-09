@@ -4,6 +4,7 @@ import java.util.Scanner;
 import arbolBinarioOrdenado.ArbolBinario;
 import arbolBinarioOrdenado.Entero;
 import arbolBinarioOrdenado.BTreePrinter;
+import arbolBinarioOrdenado.Persona;
 
 public class AppArbolBinarioBusqueda{
     public static void menu(){
@@ -42,15 +43,18 @@ public class AppArbolBinarioBusqueda{
         ArbolBinario arbol = new ArbolBinario();
         try{
            
-            arbol.insertar2(new Entero(10));
-            arbol.insertar2(new Entero(15));
-            arbol.insertar2(new Entero(30));
-            arbol.insertar2(new Entero(5));
-            arbol.insertar2(new Entero(2));
-            arbol.insertar2(new Entero(1));
+            
+            arbol.insertar(new Entero(10));
+            arbol.insertar(new Entero(15));
+            arbol.insertar(new Entero(30));
+            arbol.insertar(new Entero(5));
+            arbol.insertar(new Entero(2));
+            arbol.insertar(new Entero(1));
+            
+            
 
         }catch (Exception e){
-            System.out.println("Erro: "+e.getMessage());
+            System.out.println("Erro: "+e.getMessage()+" "+e.getStackTrace()+e.getLocalizedMessage());
         }
         System.out.println("RECORRIDO DE ARBOLES:");
         System.out.println("\n Recorrido Inorden");
@@ -60,7 +64,7 @@ public class AppArbolBinarioBusqueda{
         System.out.println("\n Recorrido Postorden");
         arbol.postorden();
         //Imprime el arbol depues de la inserción
-        System.out.println("IMPRESION DEL ARBOL:");
+        System.out.println("\n IMPRESION DEL ARBOL:");
         BTreePrinter.printNode(arbol.getRaiz());
 
     }
