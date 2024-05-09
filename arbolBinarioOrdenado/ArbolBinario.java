@@ -138,7 +138,7 @@ public class ArbolBinario{
 
     //Insercion de nodo, version iterativa
 
-    private void insertar(Object valor) throws Exception{
+    public void insertar(Object valor) throws Exception{
         Comparable dato = (Comparable)valor;
         Nodo nuevo = new Nodo();
         nuevo.setValor(dato);
