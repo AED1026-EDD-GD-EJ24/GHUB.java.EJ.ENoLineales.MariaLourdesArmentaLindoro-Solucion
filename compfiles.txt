@@ -18,6 +18,11 @@
 ./interfase/Persona.java
 ./interfase/Util.java
 ./interfase/CriterioPersonaId.java
+./arbolAVL/Nodo.java
+./arbolAVL/Logical.java
+./arbolAVL/ArbolAVL.java
+./arbolAVL/Entero.java
+./arbolAVL/Comparable.java
 ./arbolBinario/Nodo.java
 ./arbolBinario/ArbolBinario.java
 ./miPrincipal/AppArbolBinarioBusqueda.java
