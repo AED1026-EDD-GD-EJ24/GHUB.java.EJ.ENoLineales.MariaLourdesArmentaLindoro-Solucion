@@ -1,14 +1,17 @@
 package arbolAVL;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
+
 public class BTreePrinter {
+    //public static void printNode(arbolBinarioOrdenado.Nodo root)
+	public static void printNode(Nodo root) {
+		int maxLevel = BTreePrinter.maxLevel(root);
 
-	public static void printNode(arbolAVL.Nodo nodo) {
-		int maxLevel = BTreePrinter.maxLevel(nodo);
-
-		printNodeInternal(Collections.singletonList(nodo), 1, maxLevel);
+		printNodeInternal(Collections.singletonList(root), 1, maxLevel);
 	}
 
 	private static void printNodeInternal(List<Nodo> nodes, int level,
@@ -90,5 +93,5 @@ public class BTreePrinter {
 
 		return true;
 	}
-
+    
 }

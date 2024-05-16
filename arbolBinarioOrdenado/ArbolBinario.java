@@ -134,8 +134,7 @@ public class ArbolBinario{
 
         if(raiz == null){
            raiz = nuevo;
-           System.out.println("izquierdo "+raiz.getIzquierdo());
-           System.out.println("derecho "+raiz.getDerecho());
+           
         }
 
         else{
@@ -144,9 +143,7 @@ public class ArbolBinario{
 
             // aux es un auxiliar que va recorriendo los nodos, desde la raiz
             Nodo aux = raiz;
-            System.out.println("aqui empieza la raiz"+aux.getValor());
-            System.out.println("izquierda "+aux.getIzquierdo());
-            System.out.println("derecha"+aux.getDerecho());
+           
             
             while(aux !=null){
                 anterior = aux;

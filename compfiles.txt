@@ -25,6 +25,7 @@
 ./arbolAVL/Comparable.java
 ./arbolAVL/BTreePrinter.java
 ./arbolBinario/Nodo.java
+./arbolBinario/Comparable.java
 ./arbolBinario/ArbolBinario.java
 ./miPrincipal/AppArbolBinarioBusqueda.java
 ./miPrincipal/AppGrafos.java

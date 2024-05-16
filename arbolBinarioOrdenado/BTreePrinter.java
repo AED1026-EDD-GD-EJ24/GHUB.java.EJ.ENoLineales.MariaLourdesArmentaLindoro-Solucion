@@ -5,10 +5,11 @@ import java.util.List;
 
 public class BTreePrinter {
 
-	public static void printNode(arbolAVL.Nodo nodo) {
-		int maxLevel = BTreePrinter.maxLevel(nodo);
+	
+	public static void printNode(Nodo root) {
+		int maxLevel = BTreePrinter.maxLevel(root);
 
-		printNodeInternal(Collections.singletonList(nodo), 1, maxLevel);
+		printNodeInternal(Collections.singletonList(root), 1, maxLevel);
 	}
 
 	private static void printNodeInternal(List<Nodo> nodes, int level,
@@ -90,5 +91,4 @@ public class BTreePrinter {
 
 		return true;
 	}
-
 }
