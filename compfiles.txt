@@ -23,10 +23,12 @@
 ./arbolAVL/ArbolAVL.java
 ./arbolAVL/Entero.java
 ./arbolAVL/Comparable.java
+./arbolAVL/BTreePrinter.java
 ./arbolBinario/Nodo.java
 ./arbolBinario/ArbolBinario.java
 ./miPrincipal/AppArbolBinarioBusqueda.java
 ./miPrincipal/AppGrafos.java
 ./miPrincipal/AppArbol.java
 ./miPrincipal/Principal.java
+./miPrincipal/DemoClaseTreeSet.java
 ./miPrincipal/AppArbolAVL.java
