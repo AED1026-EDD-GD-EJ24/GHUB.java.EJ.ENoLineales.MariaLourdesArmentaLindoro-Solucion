@@ -28,6 +28,7 @@
 ./arbolBinario/Comparable.java
 ./arbolBinario/ArbolBinario.java
 ./miPrincipal/AppArbolBinarioBusqueda.java
+./miPrincipal/AppOrdenar.java
 ./miPrincipal/AppGrafos.java
 ./miPrincipal/AppArbol.java
 ./miPrincipal/Principal.java

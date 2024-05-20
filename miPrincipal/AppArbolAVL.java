@@ -1,6 +1,7 @@
 package miPrincipal;
 import arbolAVL.ArbolAVL;
 import arbolAVL.Entero;
+import arbolAVL.Nodo;
 
 
 import java.util.Scanner;
@@ -55,18 +56,18 @@ public class AppArbolAVL{
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
             abo.insertar(new Entero(20));
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            
+            */
             //vamos a comparar con el árbol solamente ordenado
-            /* 
+            
             abo.insertar(new Entero(10));
             abo.insertar(new Entero(15));
             abo.insertar(new Entero(30));
-            abo.insertar(new Entero(5));
-            abo.insertar(new Entero(2));
-            abo.insertar(new Entero(1));
             abo.insertar(new Entero(40));
+            abo.insertar(new Entero(50));
+            abo.insertar(new Entero(60));
+            abo.insertar(new Entero(70));
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            */
+            
 
            
 
@@ -84,69 +85,37 @@ public class AppArbolAVL{
 
         ArbolAVL abo = new ArbolAVL();
         try{
-         abo.insertar(new Entero(10));
+            abo.insertar(new Entero(10));
             abo.insertar(new Entero(15));
             abo.insertar(new Entero(30));
-            abo.insertar(new Entero(5));
-            abo.insertar(new Entero(2));
-            abo.insertar(new Entero(1));
             abo.insertar(new Entero(40));
-            System.out.println("RECORRIDO DE ARBOLES:");
-            System.out.println("\n Recorrido Inorden");
-            abo.inorden();
-            System.out.println("\n Recorrido Preorden");
-            abo.preorden();
-            System.out.println("\n Recorrido Postorden");
-            abo.postorden();
+            abo.insertar(new Entero(50));
+            abo.insertar(new Entero(60));
+            abo.insertar(new Entero(70));
+           
             //Imprime el arbol depues de la inserción
             System.out.println("\n IMPRESION DEL ARBOL:");
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
 
-            System.out.println("Mostrar el arbol después de la insercion");
-            System.out.println("Elimina un Nodo que solamente tiene un hijo");
-            System.out.println("Eliminar 1 que es una hoja");
-            abo.eliminar(new Entero(1));
-            System.out.println("RECORRIDO DE ARBOLES:");
-            System.out.println("\n Recorrido Inorden");
-            abo.inorden();
-            System.out.println("\n Recorrido Preorden");
-            abo.preorden();
-            System.out.println("\n Recorrido Postorden");
-            abo.postorden();
-            //Imprime el arbol depues de la inserción
+            //Elimino un nodo hoja
+            System.out.println("Elimino 70 que es un noso Hoja");
+            abo.eliminar(new Entero(70));
             System.out.println("\n IMPRESION DEL ARBOL:");
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            System.out.println("Elimino 5 que solamente tiene hijo izquierdo");
-            abo.eliminar(new Entero(5));
-            System.out.println("RECORRIDO DE ARBOLES:");
-            System.out.println("\n Recorrido Inorden");
-            abo.inorden();
-            System.out.println("\n Recorrido Preorden");
-            abo.preorden();
-            System.out.println("\n Recorrido Postorden");
-            abo.postorden();
-            //Imprime el arbol depues de la eliminacion
+            //Elimino un nodo que solo tenga un hijo
+            System.out.println("Elimo 60 que solo tiene un hijo izquierdo");
+            abo.eliminar(new Entero(60));
             System.out.println("\n IMPRESION DEL ARBOL:");
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            System.out.println("Elimino 30 que solamente tiene hijo derecho");
-            abo.eliminar(new Entero(30));
+            //Elimo un nodo que tenga hijo izquierdo e hijo derecho
+            System.out.println("Elimino 40 que tiene ambos hijos");
+            abo.eliminar(new Entero(40));
             System.out.println("\n IMPRESION DEL ARBOL:");
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            System.out.println("Elimina 10 que tiene hijo izquierdo y derecho");
-            abo.eliminar(new Entero(10));
-            System.out.println("\n IMPRESION DEL ARBOL:");
-            arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            //inserto algunos nodos
-            abo.insertar(new Entero(1));
-            abo.insertar(new Entero(-5));
-            System.out.println("\n IMPRESION DEL ARBOL:");
-            arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            abo.insertar(new Entero(-3));
-            System.out.println("\n IMPRESION DEL ARBOL:");
-            arbolAVL.BTreePrinter.printNode(abo.getRaiz());
-            abo.eliminar(new Entero(2));
-            System.out.println("\n IMPRESION DEL ARBOL:");
-            arbolAVL.BTreePrinter.printNode(abo.getRaiz());
+
+
+
+           
             
         }
         catch(Exception e){
@@ -156,6 +125,28 @@ public class AppArbolAVL{
     }
     public static void buscarNodo(){
         System.out.println("**** BUSCAR NODOS ****");
+        ArbolAVL abo = new ArbolAVL();
+
+        try{
+            abo.insertar(new Entero(10));
+            abo.insertar(new Entero(15));
+            abo.insertar(new Entero(30));
+            abo.insertar(new Entero(40));
+            abo.insertar(new Entero(50));
+            abo.insertar(new Entero(60));
+            abo.insertar(new Entero(70));
+            Nodo buscado = abo.buscar(new Entero(50));
+            System.out.println("Elemento buscado = "+buscado.getValor());
+            buscado = abo.buscar(new Entero(100));
+            System.out.println("Elemento buscado = "+buscado.getValor());
+
+
+
+        }
+        catch(Exception e){
+            System.out.println("error "+e.getMessage());
+
+        }
     }
 
 
