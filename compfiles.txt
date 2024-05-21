@@ -1,3 +1,5 @@
+./grafos/GrafoMatriz.java
+./grafos/Vertice.java
 ./pilas/Nodo.java
 ./pilas/Pila.java
 ./miTest/AppTest.java
