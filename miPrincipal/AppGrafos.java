@@ -1,7 +1,7 @@
 package miPrincipal;
 import java.util.Scanner;
-import grafos.Vertice;
-import grafos.GrafoMatriz;
+import grafos.matrizAdyacencia.Vertice;
+import grafos.matrizAdyacencia.GrafoMatriz;
 public class AppGrafos{
     public static void menu(){
         int opc;

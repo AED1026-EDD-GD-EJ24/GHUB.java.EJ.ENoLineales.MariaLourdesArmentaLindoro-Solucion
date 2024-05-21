@@ -1,4 +1,4 @@
-package grafos;
+package grafos.matrizAdyacencia;
 import colas.Cola;
 import pilas.Pila;
 
@@ -299,7 +299,8 @@ public class GrafoMatriz {
 		for (int i = 0; i < g.numeroDeVertices(); i++)
 			m[i] = CLAVE;// No marcado
 		m[v] = 0; // Marcado
-		cola.encolar(new Integer(v));
+		//cola.encolar(new Integer(v));
+		cola.encolar(Integer.valueOf(v));
 		while (!cola.esVacia()) {
 			Integer cw;
 			cw = cola.frente();
@@ -311,7 +312,8 @@ public class GrafoMatriz {
 				if ((g.matAd[w][u] == 1) && (m[u] == CLAVE)) {
 					// Se marca vertice u con numero de arcos hasta el
 					m[u] = m[w] + 1;
-					cola.encolar(new Integer(u));
+					cola.encolar(Integer.valueOf(u));
+					//cola.encolar(new Integer(u));
 				}
 		}
 		return m;
@@ -341,7 +343,8 @@ public class GrafoMatriz {
 		for (int i = 0; i < g.numeroDeVertices(); i++)
 			m[i] = CLAVE;// No marcado
 		m[v] = 0; // Marcado
-		pila.apilar(new Integer(v));
+		//pila.apilar(new Integer(v));
+		pila.apilar(Integer.valueOf(v));
 		while (!pila.esVacia()) {
 			Integer cw;
 			cw = pila.cima();
@@ -353,7 +356,8 @@ public class GrafoMatriz {
 				if ((g.matAd[w][u] == 1) && (m[u] == CLAVE)) {
 					// Se marca vertice u con numero de arcos hasta el
 					m[u] = m[w] + 1;
-					pila.apilar(new Integer(u));
+					//pila.apilar(new Integer(u));
+					pila.apilar(Integer.valueOf(u));
 				}
 		}
 		return m;

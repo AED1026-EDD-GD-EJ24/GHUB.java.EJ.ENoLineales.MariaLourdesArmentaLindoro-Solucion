@@ -1,4 +1,4 @@
-package grafos;
+package grafos.matrizAdyacencia;
 // Representa un nodo del grafo, con su nombre
 public class Vertice {
 	// Nombre del vertice o nodo
