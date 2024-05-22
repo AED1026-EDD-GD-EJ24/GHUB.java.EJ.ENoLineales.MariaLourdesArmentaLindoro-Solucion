@@ -36,7 +36,30 @@ public class AppGrafos{
         System.out.println("********************************");
         System.out.println("      MATRIZ ADYACENCIA         ");
         System.out.println("********************************");
-        
+        GrafoMatriz grafo = new GrafoMatriz();
+        grafo.nuevoVertice("D");
+        grafo.nuevoVertice("F");
+        grafo.nuevoVertice("K");
+        grafo.nuevoVertice("L");
+        grafo.nuevoVertice("R");
+        try{
+            grafo.nuevoArco("D", "F");
+            grafo.nuevoArco("D", "K");
+            grafo.nuevoArco("F", "D");
+            grafo.nuevoArco("L", "K");
+            grafo.nuevoArco("L", "F");
+            grafo.nuevoArco("R", "D");
+            System.out.println("Adyacente D y F?"+grafo.adyacente("D","F"));
+            System.out.println("Adyacente F y D?"+grafo.adyacente("F","D"));
+            System.out.println("Adyacente R y F?"+grafo.adyacente("R","F"));
+            }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        System.out.println("Vertices:"+grafo.numeroDeVertices());
+        System.out.println(grafo.imprimirVertices());
+        System.out.println("Matriz Adyacencia:");
+        System.out.println(grafo.imprimirMatriz()); 
 
     }
     public static void listaAdyacencia(){

@@ -72,7 +72,6 @@ classDiagram
         +borrarArco(a:String, b:String)
         +borrarVertice(nom:String)
 
-        +apilar(Integer): void
     }
     class Vertice{
         -nombre: String
