@@ -75,7 +75,7 @@ classDiagram
         +apilar(Integer): void
     }
     class Vertice{
-        -nombfe: String
+        -nombre: String
         +Vertice(nombre:String)
         +getNombre():String
         +setNombre(nombre:String)

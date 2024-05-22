@@ -14,6 +14,7 @@ public class AppGrafos{
             System.out.println("2) Lista de Adyacencia          ");
             System.out.println();
             System.out.println("0) SALIR                        ");
+            System.out.println("********************************");
             System.out.print("Selecciona opción:");
             opc = entrada.nextInt();
             switch(opc){
